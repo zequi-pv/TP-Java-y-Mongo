@@ -1,0 +1,5 @@
+{"_id":{"$oid":"619796aa53fead7e50f340e2"},"Nombre":"Jose","Apellido":"Sanchez","DNI":23564765,"Contacto":11345234,"VecesVisitadas":6,"Socio":true}
+{"_id":{"$oid":"6197acfffa7ce9f4a79e557e"},"Nombre":"Carlos","Apellido":"Perez","DNI":23657465,"Contacto":1145678903,"VecesVisitadas":10,"Socio":false}
+{"_id":{"$oid":"6197aed6fa7ce9f4a79e557f"},"Nombre":"Ezequiel","Apellido":"Di Salvo","DNI":25867456,"Contacto":1145683546,"VecesVisitadas":12,"Socio":false}
+{"_id":{"$oid":"6197af1cfa7ce9f4a79e5580"},"Nombre":"Pablo","Apellido":"Valdez","DNI":21453678,"Contacto":1189786875,"VecesVisitadas":9,"Socio":false}
+{"_id":{"$oid":"6197af52fa7ce9f4a79e5581"},"Nombre":"Oscar","Apellido":"Del Rio","DNI":19372657,"Contacto":1146573456,"VecesVisitadas":4,"Socio":true}

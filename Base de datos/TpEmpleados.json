@@ -1,0 +1,5 @@
+{"_id":{"$oid":"61978b4b53fead7e50f340e0"},"nombre":"Carlos","apellido":"Perez","edad":35,"dni":21567345,"telContacto":1145347685,"puesto":"Limpiador","sueldo":38900.5,"diasLaborales":30,"diasVacacionales":1,"rendiminento":""}
+{"_id":{"$oid":"6197a588fa7ce9f4a79e5577"},"nombre":"Jorge","apellido":"Franco","edad":33,"dni":20758645,"telContacto":11657354,"puesto":"Controlador","sueldo":42000,"diasLaborales":30,"diasVacacionales":4,"rendiminento":""}
+{"_id":{"$oid":"6197a7dffa7ce9f4a79e557b"},"nombre":"Gonzalo","apellido":"Hernandez","edad":27,"dni":24675095,"telContacto":11857645,"puesto":"Controlador","sueldo":42000,"diasLaborales":30,"diasVacacionales":4,"rendiminento":""}
+{"_id":{"$oid":"6197a8c8fa7ce9f4a79e557c"},"nombre":"Bautista","apellido":"Pecetti","edad":25,"dni":223879576,"telContacto":1145347685,"puesto":"Limpiador","sueldo":38900.5,"diasLaborales":30,"diasVacacionales":1,"rendiminento":""}
+{"_id":{"$oid":"6197aa1cfa7ce9f4a79e557d"},"nombre":"Geronimo","apellido":"Benavides","edad":32,"dni":22234768,"telContacto":1114253546,"puesto":"Gerente","sueldo":50000,"diasLaborales":27,"diasVacacionales":6,"rendiminento":""}

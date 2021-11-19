@@ -1,0 +1,5 @@
+{"_id":{"$oid":"6197878953fead7e50f340df"},"nroSala":1,"cantAsientos":24,"asientosVacios":6.0,"asientosLlenos":14.0,"premium":true,"imax":false}
+{"_id":{"$oid":"6197a4dffa7ce9f4a79e5573"},"nroSala":2,"cantAsientos":24,"asientosVacios":10,"asientosLlenos":14,"premium":false,"imax":false}
+{"_id":{"$oid":"6197a507fa7ce9f4a79e5574"},"nroSala":3,"cantAsientos":24,"asientosVacios":11,"asientosLlenos":13,"premium":true,"imax":true}
+{"_id":{"$oid":"6197a522fa7ce9f4a79e5575"},"nroSala":4,"cantAsientos":24,"asientosVacios":2,"asientosLlenos":22,"premium":false,"imax":false}
+{"_id":{"$oid":"6197a547fa7ce9f4a79e5576"},"nroSala":5,"cantAsientos":24,"asientosVacios":0,"asientosLlenos":24,"premium":false,"imax":false}
