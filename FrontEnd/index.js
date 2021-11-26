@@ -1,20 +1,28 @@
 function lol(){
 
 $.ajax({
-        url: "http://localhost:8080/api/alumnos/",
+        url: "http://localhost:8080/api/empleados/",
         type: 'GET'
 })
 .done(function (data) {
     let resultado = ""; 
     console.log(data);
-    let listaAlumnos = data.ListaDeAlumnos;
+    let listaEmpleados = data.ListaDeEmpleados;
     var datos = JSON.stringify(data);
-    for(let i = 0; i<listaAlumnos.length; i++){
-        let alumno = listaAlumnos[i];
-        let nombre = alumno.nombre;
-        let id = alumno.id;
-        let edad = alumno.edad;
-        resultado = resultado + " | "+id + " " + nombre + " "+ edad + " | " ;
+    for(let i = 0; i<listaEmpleados.length; i++){
+        let empleado = listaEmpleados[i];
+        let nombre = empleado.nombre;
+        let apellido = empleado.apellido;
+        let dni = empleado.dni;
+        let contacto = empleado.contacto;
+        let edad = empleado.edad;
+        let puesto = empleado.puesto;
+        let sueldo = empleado.sueldo;
+        let diasLaborales = empleado.diasLaborales;
+        let diasVacacionales = empleado.diasVacacionales;
+        let rendimiento = empleado.rendimiento;
+        resultado = resultado + " | "+ nombre + " " + apellido + " " + dni + " " + contacto + " " + edad + " " + puesto + " "
+        + sueldo + " " + diasLaborales + " " + diasVacacionales + " " + rendimiento + " | " ;
     }
     document.getElementById("1resul").innerHTML = resultado;
 })
@@ -28,16 +36,24 @@ $.ajax({
 function lol2(){
 var dato2 = document.getElementById("inputlol2").value;
     $.ajax({
-            url: "http://localhost:8080/api/alumnos/"+dato2,
+            url: "http://localhost:8080/api/empleados/"+ dato2,
             type: 'GET'
     })
     .done(function (data) {
         let resultado = ""; 
         console.log(data);
-        let nombre = data.Alumno.nombre;
-        let id = data.Alumno.id;
-        let edad = data.Alumno.edad;
-        resultado =id+" "+nombre+" "+ edad;
+        let nombre = data.Empleado.nombre;
+        let apellido = data.Empleado.apellido;
+        let dni = data.Empleado.dni;
+        let contacto = data.Empleado.contacto;
+        let edad = data.Empleado.edad;
+        let puesto = data.Empleado.puesto;
+        let sueldo = data.Empleado.sueldo;
+        let diasLaborales = data.Empleado.diasLaborales;
+        let diasVacacionales = data.Empleado.diasVacacionales;
+        let rendimiento = data.Empleado.rendimiento;
+        resultado = nombre + " " + apellido + " " + dni + " " + contacto + " " + edad + " " + puesto + " " + sueldo + " " + diasLaborales +
+        " " + diasVacacionales + " " + rendimiento;
 
         document.getElementById("2resul").innerHTML = resultado;
     })
@@ -155,6 +171,7 @@ function ocultar(){
 }
 ocultar();
 function modificarEmpleado(){
+
     ocultar();
     document.getElementsByClassName("modificarEmpleado")[0].style.display = "block";
 }
