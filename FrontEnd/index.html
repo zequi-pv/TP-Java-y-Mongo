@@ -6,17 +6,20 @@
         <link rel="stylesheet" href="index.css">
         <script src="jquery-3.6.0.js" defer></script>
         <script src="index.js" defer></script>
-        <title>API Firus y Prieto</title>
+        <title>Cine Alvarez, Firus, Prieto y Ruiz</title>
     </head>
 <body >
-    <div id="head">
+
+    <div class="head">
+        <div class="logo"></div>
         <div class="titulo">
-            <p id="tituloo">
+            <p>
                 GESTION CINE
             </p>
-        </div>        
-    </div>
-<div class="container-opciones">
+        </div>     
+    </div> 
+    <div class="bloque"></div>  
+<div class="container-opciones"> 
     <div class="container">
         
         <label  class="click" class="empleado-label" for="empleado-input">Empleados</label>
@@ -65,7 +68,7 @@
     </div>
     <div class="container">
          
-        <label  class="click" class="pelicula-label" for="pelicula-input">Pelicula</label>
+        <label  class="click" class="pelicula-label" for="pelicula-input">Pelicula </label>
         <input type="checkbox" id="pelicula-input">
     
         <div class="list-5 lista">
@@ -76,111 +79,151 @@
         </div>
 </div>
 
+
 </div>
      <div class="container-botones">
          <div class="empleado botones">
             <div class="modificarEmpleado" id="modEmpleado">
-             <div><input type="text" class="inputs" id="input1.0" placeholder="Inrese el nombre"></div>
-             <div><input type="text" class="inputs" id="input1.1" placeholder="Inrese el apellido"></div>
-             <div><input type="number" class="inputs" id="input1.2" placeholder="Inrese la edad"></div>
-             <div><input type="number" class="inputs" id="input1.3" placeholder="Inrese el dni"></div>
-             <div><input type="number" class="inputs" id="input1.4" placeholder="Inrese el num de telefono"></div>
-             <h id="4resul"></h>
+             <div><input type="text" class="inputs" id="input1.0" placeholder="Ingrese el nombre"></div>
+             <div><input type="text" class="inputs" id="input1.1" placeholder="Ingrese el apellido"></div>
+             <div><input type="number" class="inputs" id="input1.2" placeholder="Ingrese la edad"></div>
+             <div><input type="number" class="inputs" id="input1.3" placeholder="Ingrese el dni"></div>
+             <div><input type="number" class="inputs" id="input1.4" placeholder="Ingrese el num de telefono"></div>
+             <div><input type="text" class="inputs" id="input1.5" placeholder="Ingrese el Puesto"></div>
+             <div><button onclick="modificarUnEmpleado()" class="boton">Modificar empleado</button></div>
+             <h id="1resul"></h>
             </div>
             <div class="eliminarEmpleado">
                 <div ><input class="inputs" id="input2.0" type="number" placeholder="Ingresa el dni"></div>
-                <h id="4resul"></h>
+                <div><button onclick="eliminarUnEmpleado()" class="boton">Eliminar empleado </button></div>
+                <h id="1.2resul"></h>
             </div>
             <div class="añadirEmpleado">
-                <div><input type="text" class="inputs" id="input3.0" placeholder="Inrese el nombre"></div>
-                <div><input type="text" class="inputs" id="input3.1" placeholder="Inrese el apellido"></div>
-                <div><input type="number" class="inputs" id="input3.2" placeholder="Inrese la edad"></div>
-                <div><input type="number" class="inputs" id="input3.3" placeholder="Inrese el dni"></div>
-                <div><input type="number" class="inputs" id="input3.4" placeholder="Inrese el num de telefono"></div>
-                <div><input type="text" class="inputs" id="input3.5" placeholder="Inrese el Puesto"></div>
-                <h id="4resul"></h>
+                <div><input type="text" class="inputs" id="input3.0" placeholder="Ingrese el nombre"></div>
+                <div><input type="text" class="inputs" id="input3.1" placeholder="Ingrese el apellido"></div>
+                <div><input type="number" class="inputs" id="input3.2" placeholder="Ingrese la edad"></div>
+                <div><input type="number" class="inputs" id="input3.3" placeholder="Ingrese el dni"></div>
+                <div><input type="number" class="inputs" id="input3.4" placeholder="Ingrese el num de telefono"></div>
+                <div><input type="text" class="inputs" id="input3.5" placeholder="Ingrese el Puesto"></div>
+                <div><button onclick="añadirUnEmpleado()" class="boton"> Añadir empleado</button></div>
+                <h id="1.3resul"></h>
             </div>
             <div class="verEmpleado">
                 <div ><input class="inputs" id="input4.0" type="number" placeholder="Ingresa el dni"></div>
-                <h id="4resul"></h>
+                <div><button onclick="verUnEmpleado()" class="boton">Ver empleado </button></div>
+                <h id="1.4resul"></h>
             </div>
              </div>
             <div class="cliente botones">
                 <div class="modificarCliente">
-                    <div><input type="text" class="inputs" id="input5.0" placeholder="Inrese el nombre"></div>
-                    <div><input type="text" class="inputs" id="input5.1" placeholder="Inrese el apellido"></div>
-                    <div><input type="number" class="inputs" id="input5.3" placeholder="Inrese el dni"></div>
-                    <div><input type="number" class="inputs" id="input5.4" placeholder="Inrese el num de telefono"></div>
+                    <div><input type="text" class="inputs" id="input5.0" placeholder="Ingrese el nombre"></div>
+                    <div><input type="text" class="inputs" id="input5.1" placeholder="Ingrese el apellido"></div>
+                    <div><input type="number" class="inputs" id="input5.3" placeholder="Ingrese el dni"></div>
+                    <div><input type="number" class="inputs" id="input5.4" placeholder="Ingrese el num de telefono"></div>
+                    <div><button onclick="modificarUnCliente()" class="boton">Modificar cliente </button></div>
+                    <h id="2resul"></h>
                 </div>
                 <div class="eliminarCliente">
-                    <div><input type="number" class="inputs" id="input6.0" placeholder="Inrese el dni"></div>
+                    <div><input type="number" class="inputs" id="input6.0" placeholder="Ingrese el dni"></div>
+                    <div><button onclick="eliminarUnCliente()" class="boton">Eliminar cliente</button></div>
+                    <h id="2.1resul"></h>
                 </div>
                 <div class="añadirCliente">
-                    <div><input type="text" class="inputs" id="input7.0" placeholder="Inrese el nombre"></div>
-                    <div><input type="text" class="inputs" id="input7.1" placeholder="Inrese el apellido"></div>
-                    <div><input type="number" class="inputs" id="input7.3" placeholder="Inrese el dni"></div>
-                    <div><input type="number" class="inputs" id="input7.4" placeholder="Inrese el num de telefono"></div>
+                    <div><input type="text" class="inputs" id="input7.0" placeholder="Ingrese el nombre"></div>
+                    <div><input type="text" class="inputs" id="input7.1" placeholder="Ingrese el apellido"></div>
+                    <div><input type="number" class="inputs" id="input7.3" placeholder="Ingrese el dni"></div>
+                    <div><input type="number" class="inputs" id="input7.4" placeholder="Ingrese el num de telefono"></div>
                     <div><input type="text" class="inputs" id="input7.5" placeholder="Socio?"></div>
+                    <div><button onclick="añadirUnCliente()" class="boton"> Añadir cliente</button></div>
+                    <h id="2.2resul"></h>
                 </div>
                 <div class="VerCliente">
-                    <div><input type="number" class="verC" id="input8.0" placeholder="Inrese el dni"></div>
+                    <div><input type="number" class="verC" id="input8.0" placeholder="Ingrese el dni"></div>
+                    <div><button onclick="verUnCliente()" class="boton">Ver cliente </button></div>
+                    <h id="2.3resul"></h>
                 </div>
              </div>
              <div class="sala botones">
                  <div class="modificarSala">
-                    <div><input type="number" class="inputs" id="input9.0" placeholder="Inrese el nro de sala"></div>
-                    <div><input type="number" class="inputs" id="input9.1" placeholder="Inrese la cant de asientos"></div>
+                    <div><input type="number" class="inputs" id="input9.0" placeholder="Ingrese el nro de sala"></div>
+                    <div><input type="number" class="inputs" id="input9.1" placeholder="Ingrese la cant de asientos"></div>
                     <div><input type="text" class="inputs" id="input9.3" placeholder="Premium?"></div>
                     <div><input type="text" class="inputs" id="input9.4" placeholder="Imax?"></div>
+                    <div><button onclick="modificarUnaSala()" class="boton"> Modificar sala</button></div>
+                    <h id="3resul"></h>
                  </div>
             <div class="eliminarSala">
-                <div><input type="number" class="eliminarS" id="input10.0" placeholder="Inrese el nro de sala"></div>      
+                <div><input type="number" class="inputs" id="input10.0" placeholder="Ingrese el nro de sala"></div>
+                <div><button onclick="eliminarUnaSala()" class="boton">Eliminar sala </button></div>
+                <h id="3.1resul"></h>      
             </div>
             <div class="añadirSala">
-                <div><input type="number" class="inputs" id="input11.0" placeholder="Inrese el nro de sala"></div>
+                <div><input type="number" class="inputs" id="input11.0" placeholder="Ingrese el nro de sala"></div>
                 <div><input type="number" class="inputs" id="input11.1" placeholder="Inrese la cant de asientos"></div>
-                <div><input type="text" class="inputs" id="input11.3" placeholder="Premium?"></div>
-                <div><input type="text" class="inputs" id="input11.4" placeholder="Imax?"></div>
+                <div><input type="text" class="inputs" id="input11.2" placeholder="Premium?"></div>
+                <div><input type="text" class="inputs" id="input11.3" placeholder="Imax?"></div>
+                <div><button onclick="añadirUnaSala()" class="boton"> Añadir sala</button></div>
+                <h id="3.2resul"></h>
             </div>
             <div class="verSala">
-                <div><input type="number" class="verS" id="input12.0" placeholder="Inrese el nro de sala"></div>
+                <div><input type="number" class="inputs" id="input12.0" placeholder="Ingrese el nro de sala"></div>
+                <div><button onclick="verUnaSala()" class="boton">Ver sala </button></div>
+                <h id="3.3resul"></h>
             </div>
              </div>
              <div class="cartelera botones">
                  <div class="modificarCartelera">
-                    <div><input type="number" class="modificarCa" id="input13.0" placeholder="no se que poner aca"></div>
+                    <div><input type="number" class="inputs" id="input13.0" placeholder="no se que poner aca"></div>
+                    <div><button onclick="modificarLaCartelera()" class="boton"> Modificar cartelera</button></div>
+                    <h id="4resul"></h>
                  </div>
              </div>
-             <div class="pelicula botones">
+             <div class="pelicula botones ">
                  <div class="modificarPelicula">
-                    <div><input type="number" class="inputs" id="input14.0" placeholder="Inrese el nro de la Pelicula"></div>
-                    <div><input type="number" class="inputs" id="input14.1" placeholder="Inrese el nombre"></div>
+                    <div><input type="number" class="inputs" id="input14.0" placeholder="Ingrese el nro de la Pelicula"></div>
+                    <div><input type="number" class="inputs" id="input14.1" placeholder="Ingrese el nombre"></div>
                     <div><input type="text" class="inputs" id="input14.2" placeholder="Ingrese el genero"></div>
                     <div><input type="text" class="inputs" id="input14.3" placeholder="Ingrese la duración"></div>    
                     <div><input type="text" class="inputs" id="input14.4" placeholder="Ingrese la portada"></div> 
                     <div><input type="text" class="inputs" id="input14.5" placeholder="Doblada?"></div> 
-                    <div><input type="text" class="inputs" id="input14.6" placeholder="Subtitulo?"></div> 
-                    <div><input type="text" class="inputs" id="input14.7" placeholder="2D?"></div> 
-                    <div><input type="text" class="inputs" id="input14.8" placeholder="3D?"></div> 
+                    <div><input type="text" class="inputs" id="input14.6" placeholder="Idioma Original?"></div> 
+                    <div><input type="text" class="inputs" id="input14.7" placeholder="Ingrese la clasificación"></div> 
+                    <div><input type="text" class="inputs" id="input14.8" placeholder="Ingrese el director"></div>
+                    <div><input type="text" class="inputs" id="input14.9" placeholder="Ingrese el reparto"></div>
+                    <div><input type="text" class="inputs" id="input14.10" placeholder="Ingrese la fecha de estreno"></div>
+                    <div><input type="text" class="inputs" id="input14.11" placeholder="Ingrese la fecha de salida"></div>
+                    <div><button onclick="modificarUnaPelicula()" class="boton"> Modificar Pelicula</button></div>
+                    <h id="5resul"></h>
                  </div>
                  <div class="eliminarPelicula">
-                    <div><input type="number" class="eliminarP" id="input15.0" placeholder="Inrese el nro de la Pelicula"></div> 
+                    <div><input type="number" class="eliminarP" id="input15.0" placeholder="Ingrese el nro de la Pelicula"></div> 
+                    <div><button onclick="eliminarUnaPelicula()" class="boton">Eleminar Pelicula </button></div>
+                    <h id="5.1resul"></h>
                  </div>
                  <div class="añadirPelicula">
-                    <div><input type="number" class="inputs" id="input16.0" placeholder="Inrese el nro de la Pelicula"></div>
-                    <div><input type="number" class="inputs" id="input16.1" placeholder="Inrese el nombre"></div>
+                    <div><input type="number" class="inputs" id="input16.0" placeholder="Ingrese el nro de la Pelicula"></div>
+                    <div><input type="number" class="inputs" id="input16.1" placeholder="Ingrese el nombre"></div>
                     <div><input type="text" class="inputs" id="input16.2" placeholder="Ingrese el genero"></div>
                     <div><input type="text" class="inputs" id="input16.3" placeholder="Ingrese la duración"></div>    
                     <div><input type="text" class="inputs" id="input16.4" placeholder="Ingrese la portada"></div> 
                     <div><input type="text" class="inputs" id="input16.5" placeholder="Doblada?"></div> 
-                    <div><input type="text" class="inputs" id="input16.6" placeholder="Subtitulo?"></div> 
-                    <div><input type="text" class="inputs" id="input16.7" placeholder="2D?"></div> 
-                    <div><input type="text" class="inputs" id="input16.8" placeholder="3D?"></div> 
+                    <div><input type="text" class="inputs" id="input16.6" placeholder="Idioma Original?"></div> 
+                    <div><input type="text" class="inputs" id="input16.7" placeholder="Ingrese la clasificación"></div> 
+                    <div><input type="text" class="inputs" id="input16.8" placeholder="Ingrese el director"></div>
+                    <div><input type="text" class="inputs" id="input16.9" placeholder="Ingrese el reparto"></div>
+                    <div><input type="text" class="inputs" id="input16.10" placeholder="Ingrese la fecha de estreno"></div>
+                    <div><input type="text" class="inputs" id="input16.11" placeholder="Ingrese la fecha de salida"></div>
+                    <div><button onclick="añadirUnaPelicula()" class="boton"> Añadir pelicula</button></div>
+                    <h id="5.2resul"></h>
                  </div>
-                 <div class="verPelicula ">
-                    <div><input type="number" class="inputs" id="input17.0" placeholder="Inrese el nro de la Pelicula"></div> 
+                 <div class="verPelicula">
+                    <div><input type="number" class="inputs" id="input17.0" placeholder="Ingrese el nro de la Pelicula"></div> 
+                    <div><button onclick="verUnaPelicula()" class="boton">Ver pelicula </button></div>
+                    <h id="5.3resul"></h>
                  </div>
              </div>
+
+             
     </div>
 
             
